@@ -1,0 +1,14 @@
+.cell {
+  display: inline-block;
+  border: 1px solid black;
+  height: 2em;
+  width: 2em;
+}
+
+.cell.shown-cell {
+  background-color: white;
+}
+
+.cell.hidden-cell {
+  background-color: lightgray;
+}
