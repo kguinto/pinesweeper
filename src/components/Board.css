@@ -1,0 +1,7 @@
+.board {
+  display: block;
+}
+
+.board .board-row {
+  display: flex;
+}
