@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Cell.css';
 
 // disable context menu for right clicks
 document.oncontextmenu = function() {
