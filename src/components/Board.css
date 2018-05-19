@@ -1,5 +1,6 @@
 .board {
   display: block;
+  border: 0.05em solid #7a7a7a;
 }
 
 .board .board-row {
