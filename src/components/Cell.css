@@ -1,14 +1,23 @@
 .cell {
   display: inline-block;
-  border: 1px solid black;
-  height: 2em;
-  width: 2em;
 }
 
 .cell.shown-cell {
-  background-color: white;
+  background-color: #bcbcbc;
+  border: 0.05em solid #7a7a7a;
+
+  height: 1.9em;
+  width: 1.9em;
 }
 
 .cell.hidden-cell {
-  background-color: lightgray;
+  border-bottom: 0.25em solid #7b7b7b;
+  border-right: 0.25em solid #7b7b7b;
+  border-left: 0.25em solid white;
+  border-top: 0.25em solid white;
+
+  height: 1.5em;
+  width: 1.5em;
+
+  background-color: #bcbcbc;
 }
