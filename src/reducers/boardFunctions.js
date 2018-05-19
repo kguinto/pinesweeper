@@ -3,6 +3,7 @@ const createBlankBoard = (rows, columns) =>
     new Array(columns).fill(null).map(cell => ({
       value: 0,
       visible: false,
+      flag: false,
     }))
   );
 
@@ -59,4 +60,12 @@ const revealCell = (state, x, y) => {
   return state;
 };
 
-export { createBlankBoard, placeMines, updateNumbers, revealCell };
+const flagCell = (state, x, y) => {
+  if (!state[x][y].visible) {
+    state[x][y].flag = true;
+  }
+
+  return state;
+};
+
+export { createBlankBoard, placeMines, updateNumbers, revealCell, flagCell };
