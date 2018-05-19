@@ -42,7 +42,7 @@ class Board extends Component {
         this.props.endGame(false);
       } else if (allNonMinesVisible) {
         this.props.endGame(true);
-      } else if (mines === flaggedMines) {
+      } else if (mines === flaggedMines && flaggedMines === flags) {
         this.props.endGame(true);
       }
     }
