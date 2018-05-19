@@ -62,7 +62,7 @@ const revealCell = (state, x, y) => {
 
 const flagCell = (state, x, y) => {
   if (!state[x][y].visible) {
-    state[x][y].flag = true;
+    state[x][y].flag = !state[x][y].flag;
   }
 
   return state;
