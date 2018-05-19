@@ -8,9 +8,9 @@
 .cell.shown-cell {
   background-color: #bcbcbc;
   border: 0.05em solid #7a7a7a;
-
-  height: 1.9em;
-  width: 1.9em;
+  padding: 0.2em;
+  height: 1.5em;
+  width: 1.5em;
 }
 
 .cell.hidden-cell {
