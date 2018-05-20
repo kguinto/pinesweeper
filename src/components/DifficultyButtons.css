@@ -1,0 +1,19 @@
+.board-frame .difficulty-buttons {
+  display: flex;
+  align-content: left;
+}
+
+.board-frame .difficulty-buttons:hover .difficulty-button {
+  visibility: visible;
+}
+
+.board-frame .difficulty-button {
+  visibility: hidden;
+
+  margin-top: 0.5em;
+  margin-right: 1em;
+
+  height: 2em;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
