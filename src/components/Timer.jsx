@@ -28,7 +28,9 @@ class Timer extends Component {
 
   render() {
     let time =
-      this.state.startTime && this.state.newTime
+      this.props.gameStatus !== 'INIT' &&
+      this.state.startTime &&
+      this.state.newTime
         ? Math.floor((this.state.newTime - this.state.startTime) / 1000)
         : 0;
 
