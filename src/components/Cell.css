@@ -12,10 +12,14 @@
 
 .cell.shown-cell {
   background-color: #bcbcbc;
-  border: 0.05rem solid #7a7a7a;
-  padding: 0.2rem;
+  border: 0.25rem solid #bcbcbc;
+  outline: 0.075rem solid #7a7a7a;
   height: 2rem;
   width: 2rem;
+
+  padding: 0;
+  vertical-align: top;
+  align-items: center;
 }
 
 .cell.hidden-cell {
@@ -24,8 +28,13 @@
   border-left: 0.25rem solid white;
   border-top: 0.25rem solid white;
 
+  padding: 0;
+
   height: 2rem;
   width: 2rem;
+
+  vertical-align: top;
+  align-items: center;
 
   background-color: #bcbcbc;
 }
@@ -42,8 +51,9 @@
   background-color: #bcbcbc;
 }
 
-.cell-emoji {
+.cell .cell-emoji {
   font-size: 1rem;
+  vertical-align: text-top;
 }
 
 .cell .cell-1 {
