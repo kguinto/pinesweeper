@@ -5,32 +5,58 @@ import Board from '../containers/Board';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { playing: false };
+    this.state = { gameStatus: 'INIT', flags: 0, face: 'SMILING' };
 
     this.initializeBoard = this.initializeBoard.bind(this);
     this.endGame = this.endGame.bind(this);
+    this.updateFlags = this.updateFlags.bind(this);
+    this.startGame = this.startGame.bind(this);
   }
 
   initializeBoard(rows, columns, mines) {
     this.props.initializeBoard(rows, columns, mines);
-    this.setState({ playing: true });
+    this.setState({ gameStatus: 'INIT' });
+  }
+
+  startGame() {
+    this.setState({ gameStatus: 'PLAYING' });
   }
 
   endGame(won) {
-    console.log(won ? 'won!' : 'lost!');
-    this.setState({ playing: false });
+    this.setState({ gameStatus: won ? 'WIN' : 'LOSE' });
+  }
+
+  updateFlags(flags) {
+    this.setState({ flags });
   }
 
   render() {
+    let smiley = '';
+    let { gameStatus, flags } = this.state;
+    if (gameStatus === 'WIN') {
+      smiley = (
+        <span role="img" aria-label="smiling">
+          😎
+        </span>
+      );
+    } else if (gameStatus === 'LOSE') {
+      smiley = (
+        <span role="img" aria-label="smiling">
+          😵
+        </span>
+      );
+    } else {
+      smiley = (
+        <span role="img" aria-label="smiling">
+          🙂
+        </span>
+      );
+    }
     return (
       <div className="app">
         <header className="app-header">
           <h1 className="app-title">Minesweeper</h1>
         </header>
-        Playing: {this.state.playing.toString()}
-        <button onClick={() => this.initializeBoard(8, 8, 6)}>
-          Initialize
-        </button>
         <section
           className="content"
           style={{
@@ -39,7 +65,23 @@ class App extends Component {
             paddingTop: '3em',
           }}
         >
-          <Board playing={this.state.playing} endGame={this.endGame} />
+          <div className="board-frame">
+            <div className="board-header">
+              Flags: {flags}
+              <button
+                className="smiley-button"
+                onClick={() => this.initializeBoard(8, 8, 6)}
+              >
+                {smiley}
+              </button>Time: 0
+            </div>
+            <Board
+              gameStatus={gameStatus}
+              startGame={this.startGame}
+              endGame={this.endGame}
+              updateFlags={this.updateFlags}
+            />
+          </div>
         </section>
       </div>
     );
