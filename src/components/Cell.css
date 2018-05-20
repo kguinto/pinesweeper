@@ -3,7 +3,6 @@
 .cell {
   display: inline-block;
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 1.2rem;
 }
 
 .cell:focus {
@@ -12,10 +11,10 @@
 
 .cell.shown-cell {
   background-color: #bcbcbc;
-  border: 0.25rem solid #bcbcbc;
-  outline: 0.075rem solid #7a7a7a;
-  height: 2rem;
-  width: 2rem;
+  border: 0.25em solid #bcbcbc;
+  outline: 0.075em solid #7a7a7a;
+  height: 2em;
+  width: 2em;
 
   padding: 0;
   vertical-align: top;
@@ -23,15 +22,15 @@
 }
 
 .cell.hidden-cell {
-  border-bottom: 0.25rem solid #7b7b7b;
-  border-right: 0.25rem solid #7b7b7b;
-  border-left: 0.25rem solid white;
-  border-top: 0.25rem solid white;
+  border-bottom: 0.25em solid #7b7b7b;
+  border-right: 0.25em solid #7b7b7b;
+  border-left: 0.25em solid white;
+  border-top: 0.25em solid white;
 
   padding: 0;
 
-  height: 2rem;
-  width: 2rem;
+  height: 2em;
+  width: 2em;
 
   vertical-align: top;
   align-items: center;
@@ -40,20 +39,27 @@
 }
 
 .cell.hidden-cell:active {
-  border-top: 0.25rem solid #7b7b7b;
-  border-left: 0.25rem solid #7b7b7b;
-  border-bottom: 0.25rem solid white;
-  border-right: 0.25rem solid white;
+  border-top: 0.25em solid #7b7b7b;
+  border-left: 0.25em solid #7b7b7b;
+  border-bottom: 0.25em solid white;
+  border-right: 0.25em solid white;
 
-  height: 2rem;
-  width: 2rem;
+  height: 2em;
+  width: 2em;
 
   background-color: #bcbcbc;
 }
 
 .cell .cell-emoji {
-  font-size: 1rem;
+  font-size: 1em;
   vertical-align: text-top;
+}
+
+.cell .cell-misflag .cell-misflag-x {
+  position: relative;
+  top: -1em;
+  color: #fe0f00;
+  font-size: 1.5rem;
 }
 
 .cell .cell-1 {
