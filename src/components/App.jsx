@@ -1,21 +1,36 @@
 import React, { Component } from 'react';
 import './App.css';
+import Timer from './Timer';
+import FlagCount from './FlagCount';
 import Board from '../containers/Board';
+import Difficulty from './Difficulty';
+import DifficultyButtons from './DifficultyButtons';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { gameStatus: 'INIT', flags: 0, face: 'SMILING' };
+    this.state = {
+      gameStatus: 'INIT',
+      flags: Difficulty.EASY[2],
+      face: 'SMILING',
+      initOptions: Difficulty.EASY,
+    };
 
     this.initializeBoard = this.initializeBoard.bind(this);
     this.endGame = this.endGame.bind(this);
     this.updateFlags = this.updateFlags.bind(this);
     this.startGame = this.startGame.bind(this);
+
+    this.initializeBoard(...Difficulty.EASY);
   }
 
   initializeBoard(rows, columns, mines) {
     this.props.initializeBoard(rows, columns, mines);
-    this.setState({ gameStatus: 'INIT' });
+    this.setState({
+      gameStatus: 'INIT',
+      initOptions: [rows, columns, mines],
+      flags: mines,
+    });
   }
 
   startGame() {
@@ -54,35 +69,25 @@ class App extends Component {
     }
     return (
       <div className="app">
-        <header className="app-header">
-          <h1 className="app-title">Minesweeper</h1>
-        </header>
-        <section
-          className="content"
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            paddingTop: '3em',
-          }}
-        >
-          <div className="board-frame">
-            <div className="board-header">
-              Flags: {flags}
-              <button
-                className="smiley-button"
-                onClick={() => this.initializeBoard(8, 8, 6)}
-              >
-                {smiley}
-              </button>Time: 0
-            </div>
-            <Board
-              gameStatus={gameStatus}
-              startGame={this.startGame}
-              endGame={this.endGame}
-              updateFlags={this.updateFlags}
-            />
+        <div className="board-frame">
+          <div className="board-header">
+            <FlagCount flags={flags} />
+            <button
+              className="button smiley-button"
+              onClick={() => this.initializeBoard(...this.state.initOptions)}
+            >
+              {smiley}
+            </button>
+            <Timer gameStatus={gameStatus} />
           </div>
-        </section>
+          <Board
+            gameStatus={gameStatus}
+            startGame={this.startGame}
+            endGame={this.endGame}
+            updateFlags={this.updateFlags}
+          />
+          <DifficultyButtons initializeBoard={this.initializeBoard} />
+        </div>
       </div>
     );
   }
