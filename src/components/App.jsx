@@ -35,19 +35,19 @@ class App extends Component {
     let { gameStatus, flags } = this.state;
     if (gameStatus === 'WIN') {
       smiley = (
-        <span role="img" aria-label="smiling">
+        <span role="img" className="button-smiley" aria-label="smiling">
           😎
         </span>
       );
     } else if (gameStatus === 'LOSE') {
       smiley = (
-        <span role="img" aria-label="smiling">
+        <span role="img" className="button-smiley" aria-label="smiling">
           😵
         </span>
       );
     } else {
       smiley = (
-        <span role="img" aria-label="smiling">
+        <span role="img" className="button-smiley" aria-label="smiling">
           🙂
         </span>
       );
