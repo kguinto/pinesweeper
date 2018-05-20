@@ -2,20 +2,6 @@
   text-align: center;
 }
 
-.app-header {
-  background-color: #222;
-  padding: 20px;
-  color: white;
-}
-
-.app-title {
-  font-size: 1.5em;
-}
-
-.app-intro {
-  font-size: large;
-}
-
 .board-frame {
   border-bottom: 0.25em solid #7b7b7b;
   border-right: 0.25em solid #7b7b7b;
@@ -35,16 +21,13 @@
   padding: 0.25em;
 }
 
-.smiley-button {
-  border-bottom: 0.25rem solid #7b7b7b;
-  border-right: 0.25rem solid #7b7b7b;
-  border-left: 0.25rem solid white;
-  border-top: 0.25rem solid white;
+.board-frame .button {
+  border-bottom: 0.25em solid #7b7b7b;
+  border-right: 0.25em solid #7b7b7b;
+  border-left: 0.25em solid white;
+  border-top: 0.25em solid white;
 
   padding: 0;
-
-  height: 2rem;
-  width: 2rem;
 
   vertical-align: top;
   align-items: center;
@@ -52,19 +35,21 @@
   background-color: #bcbcbc;
 }
 
-.smiley-button:active {
-  border-top: 0.25rem solid #7b7b7b;
-  border-left: 0.25rem solid #7b7b7b;
-  border-bottom: 0.25rem solid white;
-  border-right: 0.25rem solid white;
-
-  height: 2rem;
-  width: 2rem;
+.board-frame .button:active {
+  border-top: 0.25em solid #7b7b7b;
+  border-left: 0.25em solid #7b7b7b;
+  border-bottom: 0.25em solid white;
+  border-right: 0.25em solid white;
 
   background-color: #bcbcbc;
 }
 
-.smiley-button .button-smiley {
-  font-size: 1rem;
+.board-frame .smiley-button {
+  height: 2.5em;
+  width: 2.5em;
+}
+
+.board-frame .smiley-button .button-smiley {
+  font-size: 1.2em;
   vertical-align: text-top;
 }
