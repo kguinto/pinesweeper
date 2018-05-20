@@ -36,23 +36,35 @@
 }
 
 .smiley-button {
-  border-bottom: 0.25em solid #7b7b7b;
-  border-right: 0.25em solid #7b7b7b;
-  border-left: 0.25em solid white;
-  border-top: 0.25em solid white;
+  border-bottom: 0.25rem solid #7b7b7b;
+  border-right: 0.25rem solid #7b7b7b;
+  border-left: 0.25rem solid white;
+  border-top: 0.25rem solid white;
+
+  padding: 0;
+
+  height: 2rem;
+  width: 2rem;
+
+  vertical-align: top;
+  align-items: center;
 
   background-color: #bcbcbc;
-  height: 2em;
-  width: 2em;
 }
 
 .smiley-button:active {
-  border-top: 0.25em solid #7b7b7b;
-  border-left: 0.25em solid #7b7b7b;
-  border-right: 0.25em solid white;
-  border-bottom: 0.25em solid white;
+  border-top: 0.25rem solid #7b7b7b;
+  border-left: 0.25rem solid #7b7b7b;
+  border-bottom: 0.25rem solid white;
+  border-right: 0.25rem solid white;
+
+  height: 2rem;
+  width: 2rem;
 
   background-color: #bcbcbc;
-  height: 2em;
-  width: 2em;
+}
+
+.smiley-button .button-smiley {
+  font-size: 1rem;
+  vertical-align: text-top;
 }
