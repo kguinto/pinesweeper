@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:700');
+
+.num-display {
+  background-color: #111111;
+  color: #fe0f00;
+  display: inline;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.5rem;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+}
+
+.flagCount {
+  float: left;
+}
+
+.timer {
+  float: right;
+}
