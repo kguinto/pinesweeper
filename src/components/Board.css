@@ -1,6 +1,9 @@
 .board {
   display: block;
-  border: 0.05em solid #7a7a7a;
+  border-top: 0.25em solid #7b7b7b;
+  border-left: 0.25em solid #7b7b7b;
+  border-right: 0.25em solid white;
+  border-bottom: 0.25em solid white;
 }
 
 .board .board-row {
