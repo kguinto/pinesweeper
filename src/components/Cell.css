@@ -3,24 +3,77 @@
 .cell {
   display: inline-block;
   font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.2rem;
+}
+
+.cell:focus {
+  outline: none;
 }
 
 .cell.shown-cell {
   background-color: #bcbcbc;
-  border: 0.05em solid #7a7a7a;
-  padding: 0.2em;
-  height: 1.5em;
-  width: 1.5em;
+  border: 0.05rem solid #7a7a7a;
+  padding: 0.2rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .cell.hidden-cell {
-  border-bottom: 0.25em solid #7b7b7b;
-  border-right: 0.25em solid #7b7b7b;
-  border-left: 0.25em solid white;
-  border-top: 0.25em solid white;
+  border-bottom: 0.25rem solid #7b7b7b;
+  border-right: 0.25rem solid #7b7b7b;
+  border-left: 0.25rem solid white;
+  border-top: 0.25rem solid white;
 
-  height: 1.5em;
-  width: 1.5em;
+  height: 2rem;
+  width: 2rem;
 
   background-color: #bcbcbc;
+}
+
+.cell.hidden-cell:active {
+  border-top: 0.25rem solid #7b7b7b;
+  border-left: 0.25rem solid #7b7b7b;
+  border-bottom: 0.25rem solid white;
+  border-right: 0.25rem solid white;
+
+  height: 2rem;
+  width: 2rem;
+
+  background-color: #bcbcbc;
+}
+
+.cell-emoji {
+  font-size: 1rem;
+}
+
+.cell .cell-1 {
+  color: #0f03ff;
+}
+
+.cell .cell-2 {
+  color: #087a00;
+}
+
+.cell .cell-3 {
+  color: #fe0f00;
+}
+
+.cell .cell-4 {
+  color: #07017a;
+}
+
+.cell .cell-5 {
+  color: #830800;
+}
+
+.cell .cell-6 {
+  color: #0b8183;
+}
+
+.cell .cell-7 {
+  color: #830883;
+}
+
+.cell .cell-8 {
+  color: #747474;
 }
