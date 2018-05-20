@@ -15,3 +15,44 @@
 .app-intro {
   font-size: large;
 }
+
+.board-frame {
+  border-bottom: 0.25em solid #7b7b7b;
+  border-right: 0.25em solid #7b7b7b;
+  border-left: 0.25em solid white;
+  border-top: 0.25em solid white;
+
+  padding: 0.5em;
+  background-color: #bcbcbc;
+}
+
+.board-frame .board-header {
+  border-top: 0.25em solid #7b7b7b;
+  border-left: 0.25em solid #7b7b7b;
+  border-right: 0.25em solid white;
+  border-bottom: 0.25em solid white;
+  margin-bottom: 0.5em;
+  padding: 0.25em;
+}
+
+.smiley-button {
+  border-bottom: 0.25em solid #7b7b7b;
+  border-right: 0.25em solid #7b7b7b;
+  border-left: 0.25em solid white;
+  border-top: 0.25em solid white;
+
+  background-color: #bcbcbc;
+  height: 2em;
+  width: 2em;
+}
+
+.smiley-button:active {
+  border-top: 0.25em solid #7b7b7b;
+  border-left: 0.25em solid #7b7b7b;
+  border-right: 0.25em solid white;
+  border-bottom: 0.25em solid white;
+
+  background-color: #bcbcbc;
+  height: 2em;
+  width: 2em;
+}
