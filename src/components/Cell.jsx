@@ -21,17 +21,29 @@ const Cell = ({
     !cell.flag &&
     cell.value === 'M'
   ) {
-    value = '💣';
-  } else if (cell.visible && cell.value !== 0) {
-    value = cell.value;
+    value = (
+      <span role="img" className="cell-emoji cell-mine" aria-label="mine">
+        💣
+      </span>
+    );
+  } else if (!cell.flag && cell.visible && cell.value !== 0) {
+    value = <span className={`cell-${cell.value}`}>{cell.value}</span>;
   } else if (cell.flag && (gameStatus === 'PLAYING' || cell.value === 'M')) {
-    value = '🚩';
+    value = (
+      <span role="img" className="cell-emoji cell-flag" aria-label="mine">
+        🚩
+      </span>
+    );
   } else if (cell.flag && !gameStatus === 'PLAYING' && cell.value !== 'M') {
-    value = '!💣';
+    value = (
+      <span role="img" className="cell-emoji cell-misflag" aria-label="mine">
+        !💣
+      </span>
+    );
   }
 
   return (
-    <div
+    <button
       className={`cell ${cell.visible ? 'shown-cell' : 'hidden-cell'}`}
       onClick={() => {
         if (gameStatus === 'INIT') {
@@ -49,7 +61,7 @@ const Cell = ({
       }}
     >
       {value}
-    </div>
+    </button>
   );
 };
 
