@@ -23,7 +23,7 @@ const Cell = ({
   ) {
     value = (
       <span role="img" className="cell-emoji cell-mine" aria-label="mine">
-        💣
+        🍍
       </span>
     );
   } else if (cell.flag && (gameStatus === 'PLAYING' || cell.value === 'M')) {
@@ -35,7 +35,7 @@ const Cell = ({
   } else if (cell.flag && !(gameStatus === 'PLAYING') && cell.value !== 'M') {
     value = (
       <span role="img" className="cell-emoji cell-misflag" aria-label="mine">
-        💣
+        🍍
         <span className="cell-misflag-x">X</span>
       </span>
     );
